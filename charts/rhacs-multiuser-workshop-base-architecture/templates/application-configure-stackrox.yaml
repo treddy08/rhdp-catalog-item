@@ -29,4 +29,7 @@ spec:
   ignoreDifferences:
     - jsonPointers:
         - /metadata/labels
-      kind: '*'
+      kind: ServiceAccount
+    - jsonPointers:
+        - /metadata/labels
+      kind: ClusterRoleBinding
