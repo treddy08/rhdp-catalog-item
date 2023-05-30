@@ -24,6 +24,7 @@ spec:
     automated: {}
     syncOptions:
       - PruneLast=true
+      - RespectIgnoreDifferences=true
   ignoreDifferences:
     - jsonPointers:
         - /metadata/labels
