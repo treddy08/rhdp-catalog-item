@@ -28,4 +28,7 @@ spec:
   ignoreDifferences:
     - jsonPointers:
         - /metadata/labels
-      kind: '*'
+      kind: ServiceAccount
+    - jsonPointers:
+        - /metadata/labels/app.kubernetes.io~1instance
+      kind: ClusterRoleBinding

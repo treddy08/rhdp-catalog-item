@@ -31,3 +31,6 @@ spec:
     - jsonPointers:
         - /metadata/labels
       kind: '*'
+    - jsonPointers:
+        - /metadata/labels/app.kubernetes.io~1instance
+      kind: ClusterRoleBinding
