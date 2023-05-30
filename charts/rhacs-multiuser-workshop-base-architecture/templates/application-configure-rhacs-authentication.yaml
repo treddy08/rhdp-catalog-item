@@ -31,4 +31,3 @@ spec:
     - jsonPointers:
         - /metadata/labels
       kind: ClusterRoleBinding
-      group: rbac.authorization.k8s.io/v1
