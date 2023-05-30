@@ -3,6 +3,9 @@ kind: Application
 metadata:
   name: configure-stackrox
   namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   destination:
     namespace: stackrox
