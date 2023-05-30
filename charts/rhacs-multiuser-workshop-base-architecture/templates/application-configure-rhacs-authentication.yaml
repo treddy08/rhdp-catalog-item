@@ -28,3 +28,6 @@ spec:
     - jsonPointers:
         - /metadata/labels
       kind: ServiceAccount
+    - jsonPointers:
+        - /metadata/labels
+      kind: ClusterRoleBinding
