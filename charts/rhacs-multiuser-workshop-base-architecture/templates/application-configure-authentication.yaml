@@ -23,5 +23,6 @@ spec:
     repoURL: 'https://github.com/treddy08/rhdp-workloads'
     targetRevision: HEAD
   syncPolicy:
+    automated: {}
     syncOptions:
       - CreateNamespace=true
