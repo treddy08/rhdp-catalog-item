@@ -26,3 +26,7 @@ spec:
     syncOptions:
       - CreateNamespace=true
       - PruneLast=true
+  ignoreDifferences:
+    - jsonPointers:
+        - /metadata/labels
+      kind: ServiceAccount

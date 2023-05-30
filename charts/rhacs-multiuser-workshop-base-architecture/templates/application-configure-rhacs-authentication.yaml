@@ -24,3 +24,7 @@ spec:
     automated: {}
     syncOptions:
       - PruneLast=true
+  ignoreDifferences:
+    - jsonPointers:
+        - /metadata/labels
+      kind: ServiceAccount
