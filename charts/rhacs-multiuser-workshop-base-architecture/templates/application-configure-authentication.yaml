@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: configure-authentication
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  destination:
+    namespace: authentication
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    helm:
+      parameters:
+        - name: authentication.adminUser
+          value: opentlc-mgr
+        - name: authentication.htpasswd.adminPassword
+          value: r3dh4t1!
+        - name: authentication.htpasswd.userPassword
+          value: openshift
+    path: charts/authentication/configure-authentication
+    repoURL: 'https://github.com/treddy08/rhdp-workloads'
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
