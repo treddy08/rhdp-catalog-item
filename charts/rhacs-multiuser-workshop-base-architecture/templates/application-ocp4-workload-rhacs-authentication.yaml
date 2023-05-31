@@ -17,7 +17,7 @@ spec:
           value: admin
         - name: stackrox.central.adminPassword
           value: 0mh6mZCZ
-    path: charts/rhacs-authentication/configure-multiuser
+    path: charts/rhacs-authentication
     repoURL: 'https://github.com/treddy08/rhdp-workloads'
     targetRevision: HEAD
   syncPolicy:

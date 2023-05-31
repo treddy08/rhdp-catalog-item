@@ -19,7 +19,7 @@ spec:
           value: r3dh4t1!
         - name: authentication.htpasswd.userPassword
           value: openshift
-    path: charts/authentication/configure-authentication
+    path: charts/authentication
     repoURL: 'https://github.com/treddy08/rhdp-workloads'
     targetRevision: HEAD
   syncPolicy:
