@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: configure-rhacs-authentication
+  name: ocp4-workload-rhacs-authentication
   namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "4"
 spec:
   destination:
-    namespace: stackrox
+    namespace: ocp4-workload-rhacs-authentication
     server: 'https://kubernetes.default.svc'
   project: default
   source:

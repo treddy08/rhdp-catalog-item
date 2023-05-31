@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: configure-authentication
+  name: ocp4-workload-authentication
   namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 spec:
   destination:
-    namespace: authentication
+    namespace: ocp4-workload-authentication
     server: 'https://kubernetes.default.svc'
   project: default
   source:
